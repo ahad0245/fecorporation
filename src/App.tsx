@@ -206,7 +206,7 @@ function App() {
         },
         body: JSON.stringify(contactForm)
       });
-
+  
       const result = await response.json();
 
       if (result.success) {
