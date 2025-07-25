@@ -199,7 +199,7 @@ function App() {
     setSubmitMessage('');
     
     try {
-      const response = await fetch('https://jpqrqhjjheockgmvpagk.supabase.co/functions/v1/contact-form', {
+      const response = await fetch('https://oyxeclmrvifjalpyfsnr.supabase.co/functions/v1/contact-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -632,7 +632,7 @@ function App() {
                   </div>
                   <div>
                     <div className="font-semibold">Headquarters</div>
-                    <div className="text-white/80">Toronto, Ontario, Canada</div>
+                    <div className="text-white/80">325 Front Street, Suite 300, Toronto, Ontario, M5V-2Y1</div>
                   </div>
                 </div>
                 
@@ -642,7 +642,7 @@ function App() {
                   </div>
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-white/80">+1 (416) 555-0100</div>
+                    <div className="text-white/80">+1–416-623-6345</div>
                   </div>
                 </div>
                 
