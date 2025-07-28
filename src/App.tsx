@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ContactForm from './components/ContactForm'
 import { 
   Building2, 
   Globe, 
@@ -42,6 +43,7 @@ interface Project {
   image: string;
   status: string;
 }
+
 
 const teamMembers: TeamMember[] = [
   {
@@ -710,7 +712,9 @@ function App() {
               </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+           
+           
+            {/* <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
               <h3 className="text-2xl font-bold mb-6">Start a Conversation</h3>
               
               {submitMessage && (
@@ -801,7 +805,12 @@ function App() {
                   {isSubmitting ? 'Sending...' : 'Send Inquiry'}
                 </button>
               </form>
-            </div>
+            </div> */}
+            <ContactForm />
+          
+          
+          
+          
           </div>
         </div>
       </section>

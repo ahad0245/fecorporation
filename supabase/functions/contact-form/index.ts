@@ -1,62 +1,75 @@
-// supabase/functions/contact-form/index.ts
+import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
+import { Resend } from "npm:resend";
 
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { Resend } from "npm:resend"; // Import the Resend library from NPM
-
-// Define CORS headers
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Initialize Resend with your API key from the environment variables
-const resend = new Resend(Deno.env.get("sendemail") ?? "");
+const resendApiKey = Deno.env.get("sendemail");
 
 serve(async (req) => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
 
-  try {
-    // Safely parse the request body for form data
-    const { name, email, message } = await req.json();
+  if (req.method !== "POST") {
+    return new Response(JSON.stringify({ error: "Method Not Allowed" }), {
+      status: 405,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
 
-    // Use Resend to send the email
+  try {
+    if (!resendApiKey) {
+      throw new Error("sendemail API key is not set in environment variables.");
+    }
+    const resend = new Resend(resendApiKey);
+
+    // 1. Destructure the new fields to match your form
+    // Note: The names 'firstName', 'lastName', etc., must match what your frontend sends
+    const { firstName, lastName, email, company, projectDetails } = await req.json();
+
+    // 2. Create a more descriptive email subject
+    const subject = `New Project Inquiry from ${firstName} ${lastName}`;
+
+    // 3. Build the new HTML body with all the fields from your form
+    const htmlBody = `
+      <h2>New Project Inquiry</h2>
+      <p>You have a new submission from your "Start a Conversation" form.</p>
+      <hr>
+      <h3>Submitter Details</h3>
+      <ul>
+        <li><strong>First Name:</strong> ${firstName}</li>
+        <li><strong>Last Name:</strong> ${lastName}</li>
+        <li><strong>Email:</strong> <a href="mailto:${email}">${email}</a></li>
+        <li><strong>Company:</strong> ${company || 'Not provided'}</li>
+      </ul>
+      <h3>Project Details</h3>
+      <p>${projectDetails}</p>
+    `;
+
     const { data, error } = await resend.emails.send({
-      // IMPORTANT: This "from" address must be from your verified Resend domain
       from: "Contact Form <inquiries@fecorporation.ca>",
-      
-      // This is the email address where you want to receive the messages
       to: ["abdulahad@i8is.com"],
-      
-      subject: `New message from ${name}`,
-      
-      html: `<p>You have a new contact form submission from:</p>
-             <p><strong>Name:</strong> ${name}</p>
-             <p><strong>Email:</strong> ${email}</p>
-             <p><strong>Message:</strong></p>
-             <p>${message}</p>`,
-             
-      // Pro-tip: This lets you hit "Reply" in your email client to reply directly to the user
-      reply_to: email, 
+      subject: subject,
+      html: htmlBody,
+      reply_to: email, // This allows you to reply directly to the user
     });
 
-    // Handle potential errors from the email sending service
     if (error) {
-      // Re-throw the error to be caught by the main catch block
-      throw new Error(JSON.stringify(error));
+      console.error({ resendError: error });
+      throw new Error("Failed to send email.");
     }
 
-    // Return a success response to the frontend
-    return new Response(JSON.stringify({ message: "Email sent successfully!" }), {
+    return new Response(JSON.stringify({ message: "Form submitted successfully!" }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
-    // Handle any errors that occur during the process
+    console.error(error);
     return new Response(JSON.stringify({ error: error.message }), {
-      status: 500, // Internal Server Error
+      status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
