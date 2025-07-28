@@ -62,6 +62,19 @@ const teamMembers: TeamMember[] = [
     title: "Medical Director & Innovation Specialist",
     photo: "/images/team/dk-macfadden.png",
     description: "Innovative specialist combining medical sector expertise with financial engineering to develop unique insurance-linked securities and risk management solutions."
+  },
+   {
+    name: "Rodger Lodenguai",
+    title: "Senior Executive Advisor",
+    photo: "/images/team/Rodger B&W.png",
+    credentials: "Visionary strategist in global tech, telecom, and security sectors with over 50,000 executive connections worldwide.",
+    description: "Technology strategy, startup mentoring, telecom, security, smart cities, enterprise systems, funding, international business, government consulting."
+  },
+  {
+    name: "Kamran Tariq",
+    title: "Founder & CEO, I8IS INC",
+    photo: "/images/team/Kami B&W.png",
+    description: "Visionary leader driving innovation in AI, fintech, and software development. As Founder and CEO of I8IS INC, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
   }
 ];
 
@@ -199,13 +212,14 @@ function App() {
     setSubmitMessage('');
     
     try {
-      const response = await fetch('https://oyxeclmrvifjalpyfsnr.supabase.co/functions/v1/contact-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(contactForm)
-      });
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/contact-form`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`
+  },
+  body: JSON.stringify(contactForm)
+});
   
       const result = await response.json();
 
@@ -268,6 +282,14 @@ function App() {
               <button onClick={() => scrollToSection('contact')} className="text-navy-700 hover:text-gold-600 transition-colors duration-200 font-medium">
                 Contact
               </button>
+              <a
+  href="https://z9i3vm4sng5r.space.minimax.io/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-navy-700 hover:text-gold-600 transition-colors duration-200 font-medium"
+>
+  Calculator
+</a>
             </div>
 
             <button
