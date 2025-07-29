@@ -47,11 +47,18 @@ interface Project {
 
 const teamMembers: TeamMember[] = [
   {
+    name: "Kamran Tariq",
+    title: "Founder & CEO",
+    photo: "/images/team/Kami B&W.png",
+    description: "Visionary leader driving innovation in AI, fintech, and software development. As Founder and CEO of FE Corporation, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
+  },
+  {
     name: "Gareth Wiggan",
     title: "Director & Co-Founder",
     photo: "/images/team/gareth-wiggan.jpg",
     description: "Leading strategist in infrastructure financing and cross-border project development with over 15 years of experience in structuring complex financial instruments."
   },
+  
   {
     name: "Professor Hélyette Geman",
     title: "Senior Financial Officer",
@@ -59,12 +66,7 @@ const teamMembers: TeamMember[] = [
     credentials: "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
     description: "World-renowned expert in financial engineering and commodity markets, bringing academic rigor and practical expertise to complex securitization projects."
   },
-  {
-    name: "Dr. D.K. MacFadden",
-    title: "Medical Director & Innovation Specialist",
-    photo: "/images/team/dk-macfadden.png",
-    description: "Innovative specialist combining medical sector expertise with financial engineering to develop unique insurance-linked securities and risk management solutions."
-  },
+  
    {
     name: "Rodger Lodenguai",
     title: "Senior Executive Advisor",
@@ -73,10 +75,16 @@ const teamMembers: TeamMember[] = [
     description: "Technology strategy, startup mentoring, telecom, security, smart cities, enterprise systems, funding, international business, government consulting."
   },
   {
-    name: "Kamran Tariq",
-    title: "Founder & CEO, I8IS INC",
-    photo: "/images/team/Kami B&W.png",
-    description: "Visionary leader driving innovation in AI, fintech, and software development. As Founder and CEO of I8IS INC, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
+    name: "Dr. D.K. MacFadden",
+    title: "Medical Director & Innovation Specialist",
+    photo: "/images/team/dk-macfadden.png",
+    description: "Innovative specialist combining medical sector expertise with financial engineering to develop unique insurance-linked securities and risk management solutions."
+  },
+  {
+    name: "Fei Xu",
+    title: "Chartered Financial Analyst",
+    photo: "/images/team/Fei Xu.png",
+    description: "A distinguished capital market and investment professional with over two decades of extensive experience shaping China's fixed-income and private equity sectors."
   }
 ];
 
