@@ -46,26 +46,26 @@ interface Project {
 
 
 const teamMembers: TeamMember[] = [
-  {
-    name: "Kamran Tariq",
-    title: "Founder & CEO",
-    photo: "/images/team/Kami B&W.png",
-    description: "Visionary leader driving innovation in AI, fintech, and software development. As Founder and CEO of FE Corporation, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
-  },
-  {
-    name: "Gareth Wiggan",
-    title: "Director & Co-Founder",
-    photo: "/images/team/gareth-wiggan.jpg",
-    description: "Leading strategist in infrastructure financing and cross-border project development with over 15 years of experience in structuring complex financial instruments."
-  },
-  
-  {
+   {
     name: "Professor Hélyette Geman",
-    title: "Senior Financial Officer",
+    title: "Founder & CFO",
     photo: "/images/team/helyette-geman.jpg",
     credentials: "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
     description: "World-renowned expert in financial engineering and commodity markets, bringing academic rigor and practical expertise to complex securitization projects."
   },
+  {
+    name: "Kamran Tariq",
+    title: "Cheif Executive Officer",
+    photo: "/images/team/Kami B&W.png",
+    description: "Visionary leader driving innovation in AI, fintech, and software development. As CEO of FE Corporation, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
+  },
+  {
+    name: "Gareth Wiggan",
+    title: "Director",
+    photo: "/images/team/gareth-wiggan.jpg",
+    description: "Leading strategist in infrastructure financing and cross-border project development with over 15 years of experience in structuring complex financial instruments."
+  },
+  
   
    {
     name: "Rodger Lodenguai",
