@@ -86,6 +86,13 @@ const teamMembers: TeamMember[] = [
     photo: "/images/team/Fei Xu.png",
     description: "A distinguished capital market and investment professional with over two decades of extensive experience shaping China's fixed-income and private equity sectors."
   }
+  ,
+  {
+    name: "Rami Omran",
+    title: "VP Middle East Operations",
+    photo: "/images/team/omran.jpeg",
+    description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
+  }
 ];
 
 const services: Service[] = [
@@ -327,7 +334,7 @@ function App() {
             
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
               Financial
-              <span className="block text-gold-400">Alchemy</span>
+              <span className="block text-gold-400">Engineering</span>
             </h1>
             
             <p className="text-2xl md:text-3xl text-white/90 mb-6 max-w-4xl mx-auto leading-relaxed">
@@ -368,7 +375,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-navy-800 mb-8">About FE Corporation</h2>
             <p className="text-2xl text-navy-600 max-w-4xl mx-auto leading-relaxed">
-              We are the architects of capital market transformation, specializing in the alchemy that converts illiquid, real-world assets into predictable, securable, and standardized financial instruments.
+              We are the architects of capital market transformation, specializing in the engineering that converts illiquid, real-world assets into predictable, securable, and standardized financial instruments.
             </p>
           </div>
           
