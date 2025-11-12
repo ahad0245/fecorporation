@@ -90,7 +90,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "Rami Omran",
     title: "VP Middle East Operations",
-    photo: "/images/team/omran.jpeg",
+    photo: "/images/team/omran1.jpg",
     description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
   }
 ];
