@@ -55,7 +55,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Kamran Tariq",
-    title: "Cheif Executive Officer",
+    title: "Chief Executive Officer",
     photo: "/images/team/Kami B&W.png",
     description: "Visionary leader driving innovation in AI, fintech, and software development. As CEO of FE Corporation, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
   },
@@ -91,6 +91,20 @@ const teamMembers: TeamMember[] = [
     name: "Rami Omran",
     title: "VP Middle East Operations",
     photo: "/images/team/omran1.jpg",
+    description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
+  }
+  ,
+  {
+    name: "Mohammad Hamed",
+    title: "CEO Middle East",
+    photo: "/images/team/",
+    description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
+  }
+  ,
+  {
+    name: "Hana Mikhled Al-Husainat",
+    title: "Executive advisor",
+    photo: "/images/team/",
     description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
   }
 ];
