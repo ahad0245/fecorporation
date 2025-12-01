@@ -55,9 +55,9 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Kamran Tariq",
-    title: "Chief Executive Officer",
+    title: "Chief Technology Officer",
     photo: "/images/team/Kami B&W.png",
-    description: "Visionary leader driving innovation in AI, fintech, and software development. As CEO of FE Corporation, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
+    description: "Visionary leader driving innovation in AI, fintech, and software development. As CTO of FE Corporation, Kamran leads high-impact projects at the intersection of artificial intelligence and digital transformation, shaping the future of intelligent systems and financial technology."
   },
   {
     name: "Gareth Wiggan",
@@ -97,15 +97,15 @@ const teamMembers: TeamMember[] = [
   {
     name: "Mohammad Hamed",
     title: "CEO Middle East",
-    photo: "/images/team/",
-    description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
+    photo: "/images/team/ba1.jpg",
+    description: "Seasoned capital markets and investment executive leading regional strategy, growth, and large-scale financing initiatives while connecting global investors with high-impact opportunities across the Middle East."
   }
   ,
   {
     name: "Hana Mikhled Al-Husainat",
-    title: "Executive advisor",
-    photo: "/images/team/",
-    description: "A seasoned capital markets and investment leader with deep expertise in driving growth, strategic expansion, and cross-border partnerships across the Middle East."
+    title: "Executive Advisor",
+    photo: "/images/team/ba2.jpg",
+    description: "Experienced corporate finance and governance advisor, focused on structuring cross-border deals, strengthening risk management, and guiding Middle Eastern enterprises through sustainable expansion."
   }
 ];
 
