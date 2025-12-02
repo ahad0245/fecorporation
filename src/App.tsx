@@ -18,15 +18,17 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react'
-import './App.css'
+import { Link } from "react-router-dom";
+import "./App.css";
+import { teamMembers, getFirstNameSlug } from "./lib/team";
 
-interface TeamMember {
-  name: string;
-  title: string;
-  photo: string;
-  credentials?: string;
-  description: string;
-}
+// interface TeamMember {
+//   name: string;
+//   title: string;
+//   photo: string;
+//   credentials?: string;
+//   description: string;
+// }
 
 interface Service {
   title: string;
@@ -45,78 +47,88 @@ interface Project {
 }
 
 
-const teamMembers: TeamMember[] = [
-  {
-    name: "Professor Hélyette Geman",
-    title: "Founder & CFO",
-    photo: "/images/team/helyette-geman.jpg",
-    credentials:
-      "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
-    description:
-      "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
-  },
+// const teamMembers: TeamMember[] = [
+//   {
+//     name: "Professor Hélyette Geman",
+//     title: "Founder & CFO",
+//     photo: "/images/team/helyette-geman.jpg",
+//     credentials:
+//       "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
+//     description:
+//       "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
+//   },
  
-  {
-    name: "Gareth Wiggan",
-    title: "Director",
-    photo: "/images/team/gareth-wiggan.jpg",
-    description:
-      "Specialist in infrastructure and cross-border project finance with more than 15 years of experience. Gareth has structured multi-billion-dollar capital solutions in energy, transport, and digital infrastructure for governments, sponsors, and institutional investors."
-  },
-   {
-    name: "Kamran Tariq",
-    title: "Chairman", // ✅ updated designation
-    photo: "/images/team/Kami B&W.png",
-    description:
-      "Chairman with a track record of building data-driven financial platforms across Europe and the Middle East. Kamran oversees firm strategy, governance, and technology alignment, ensuring every solution blends quantitative rigor with real-world usability."
-  },
-  {
-    name: "Mohammad Hamed",
-    title: "CEO",
-    photo: "/images/team/ba1.jpg",
-    description:
-      "Seasoned capital markets executive with deep Middle East coverage. Mohammad leads regional strategy, investor relationships, and origination, connecting global capital with high-growth opportunities across infrastructure, financial services, and real assets."
-  },
+//   {
+//     name: "Gareth Wiggan",
+//     title: "Director",
+//     photo: "/images/team/gareth-wiggan.jpg",
+//     description:
+//       "Specialist in infrastructure and cross-border project finance with more than 15 years of experience. Gareth has structured multi-billion-dollar capital solutions in energy, transport, and digital infrastructure for governments, sponsors, and institutional investors."
+//   },
+//    {
+//     name: "Kamran Tariq",
+//     title: "Chairman", // ✅ updated designation
+//     photo: "/images/team/Kami B&W.png",
+//     description:
+//       "Chairman with a track record of building data-driven financial platforms across Europe and the Middle East. Kamran oversees firm strategy, governance, and technology alignment, ensuring every solution blends quantitative rigor with real-world usability."
+//   },
+//   {
+//     name: "Mohammad Hamed",
+//     title: "CEO",
+//     photo: "/images/team/ba1.jpg",
+//     description:
+//       "Seasoned capital markets executive with deep Middle East coverage. Mohammad leads regional strategy, investor relationships, and origination, connecting global capital with high-growth opportunities across infrastructure, financial services, and real assets."
+//   },
   
-  {
-    name: "Hana Mikhled Al-Husainat",
-    title: "Chief Technology Officer", // ✅ updated designation
-    photo: "/images/team/ba2.jpg",
-    description:
-      "Corporate finance and governance specialist turned technology leader. Hana designs and oversees the firm’s digital platforms, data architecture, and risk-aware workflows, enabling scalable, compliant solutions for banks, regulators, and regional enterprises."
-  },
-   {
-    name: "Fei Xu",
-    title: "Chartered Financial Analyst",
-    photo: "/images/team/Fei Xu.png",
-    description:
-      "Capital markets professional and CFA charterholder with extensive experience in China’s fixed-income and private-equity markets. Fei focuses on credit research, portfolio construction, and cross-border capital flows between Asia and the Middle East."
-  },
-  {
-    name: "Dr. D.K. MacFadden",
-    title: "Medical Director & Innovation Specialist",
-    photo: "/images/team/dk-macfadden.png",
-    description:
-      "Medical sector innovator with deep expertise in healthcare systems and insurance. Dr. MacFadden applies clinical insight to create new insurance-linked securities and risk-transfer structures, particularly in life and health portfolios."
-  },
-  {
-    name: "Rodger Lodenguai",
-    title: "Senior Executive Advisor",
-    photo: "/images/team/Rodger B&W.png",
-    credentials:
-      "Visionary strategist in global tech, telecom, smart-city, and cybersecurity sectors with over 50,000 executive connections worldwide.",
-    description:
-      "Senior advisor to boards and founders across telecom, technology, smart-city, and cybersecurity verticals."
-  },
+//   {
+//     name: "Hana Mikhled Al-Husainat",
+//     title: "Chief Technology Officer", // ✅ updated designation
+//     photo: "/images/team/ba2.jpg",
+//     description:
+//       "Corporate finance and governance specialist turned technology leader. Hana designs and oversees the firm’s digital platforms, data architecture, and risk-aware workflows, enabling scalable, compliant solutions for banks, regulators, and regional enterprises."
+//   },
+//    {
+//     name: "Fei Xu",
+//     title: "Chartered Financial Analyst",
+//     photo: "/images/team/Fei Xu.png",
+//     description:
+//       "Capital markets professional and CFA charterholder with extensive experience in China’s fixed-income and private-equity markets. Fei focuses on credit research, portfolio construction, and cross-border capital flows between Asia and the Middle East."
+//   },
+//   {
+//     name: "Dr. D.K. MacFadden",
+//     title: "Medical Director & Innovation Specialist",
+//     photo: "/images/team/dk-macfadden.png",
+//     description:
+//       "Medical sector innovator with deep expertise in healthcare systems and insurance. Dr. MacFadden applies clinical insight to create new insurance-linked securities and risk-transfer structures, particularly in life and health portfolios."
+//   },
+//   {
+//     name: "Rodger Lodenguai",
+//     title: "Senior Executive Advisor",
+//     photo: "/images/team/Rodger B&W.png",
+//     credentials:
+//       "Visionary strategist in global tech, telecom, smart-city, and cybersecurity sectors with over 50,000 executive connections worldwide.",
+//     description:
+//       "Senior advisor to boards and founders across telecom, technology, smart-city, and cybersecurity verticals."
+//   },
  
-  {
-    name: "Rami Omran",
-    title: "VP Middle East Operations",
-    photo: "/images/team/omran1.jpg",
-    description:
-      "Capital markets and investment banking professional with a strong record in growth strategy and cross-border deal-making. Rami leads on-the-ground execution, local partnerships, and client coverage across key Middle Eastern markets."
-  }
-];
+  
+//   {
+//     name: "Rami Omran",
+//     title: "VP Middle East Operations",
+//     photo: "/images/team/omran1.jpg",
+//     description:
+//       "Capital markets and investment banking professional with a strong record in growth strategy and cross-border deal-making. Rami leads on-the-ground execution, local partnerships, and client coverage across key Middle Eastern markets."
+//   }
+//   ,
+ 
+//  {
+//     name: "Minnu Kalapala",
+//     title: "In-House Legal Counsel",
+//     photo: "/images/team/ba3.jpg", // Replace with actual image path
+//     // credentials: "J.D. | Registered Attorney (Chicago)",
+//     description: "Legal expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, she provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
+//   }
+// ];
 
 
 const services: Service[] = [
@@ -460,66 +472,70 @@ function App() {
       </section>
 
       {/* Team Section */}
-    <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-navy-50 to-gold-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-navy-800 mb-8">
-            Leadership Team
-          </h2>
-          <p className="text-xl text-navy-600 max-w-3xl mx-auto">
-            World-class expertise in financial engineering, combining academic rigor with practical market experience.
-          </p>
-        </div>
+    <section
+  id="team"
+  className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-navy-50 to-gold-50"
+>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold text-navy-800 mb-8">
+        Leadership Team
+      </h2>
+      <p className="text-xl text-navy-600 max-w-3xl mx-auto">
+        World-class expertise in financial engineering, combining academic
+        rigor with practical market experience.
+      </p>
+    </div>
 
-        {/* GRID SETUP: 
-           - Mobile: 1 column
-           - Tablet: 2 columns
-           - XL Desktop: 4 columns
-           - Gap: 4 (1rem)
-        */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className={`
-                bg-white p-8 rounded-2xl shadow-xl border border-navy-100 
-                hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full 
-                
-                /* --- LOGIC FOR CENTERING THE LAST ITEM (5th item) --- */
-                
-                /* 1. Make the last item span the entire bottom row */
-                xl:last:col-span-full 
-                
-                /* 2. Move it to the center of that row */
-                xl:last:justify-self-center 
-                
-                /* 3. Force the width to exactly match one column */
-                /* Math: (100% width - 3 gaps of 1rem) divided by 4 columns */
-                xl:last:w-[calc((100%-3rem)/4)]
-              `}
-            >
-              <div className="text-center flex flex-col h-full">
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-gold-200 shadow-lg"
-                />
-                <h3 className="text-2xl font-bold text-navy-800 mb-2">{member.name}</h3>
-                <div className="text-lg font-semibold text-gold-600 mb-4">{member.title}</div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+      {teamMembers.map((member) => {
+        const slug = getFirstNameSlug(member);
 
-                {member.credentials && (
-                  <div className="bg-gold-50 p-3 rounded-lg mb-4">
-                    <p className="text-sm font-semibold text-gold-800">{member.credentials}</p>
-                  </div>
-                )}
-
-                <p className="text-navy-600 leading-relaxed">{member.description}</p>
+        return (
+          <div
+            key={member.name}
+            className="bg-white p-8 rounded-2xl shadow-xl border border-navy-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full"
+          >
+            <div className="text-center flex flex-col h-full">
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-gold-200 shadow-lg"
+              />
+              <h3 className="text-2xl font-bold text-navy-800 mb-2">
+                {member.name}
+              </h3>
+              <div className="text-lg font-semibold text-gold-600 mb-4">
+                {member.title}
               </div>
+
+              {member.credentials && (
+                <div className="bg-gold-50 p-3 rounded-lg mb-4">
+                  <p className="text-sm font-semibold text-gold-800">
+                    {member.credentials}
+                  </p>
+                </div>
+              )}
+
+              <p className="text-navy-600 leading-relaxed flex-1">
+                {member.description}
+              </p>
+
+              {/* Button to the detailed profile page */}
+              <Link
+                to={`/${slug}`}
+                className="mt-6 inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 text-white text-sm font-semibold hover:from-gold-600 hover:to-gold-700 transition-all"
+              >
+                View profile
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
 
       {/* Services Section */}
