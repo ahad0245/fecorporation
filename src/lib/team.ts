@@ -86,6 +86,14 @@ export const teamMembers: TeamMember[] = [
     description:
       "Legal expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, she provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
   }
+  ,
+  {
+    name: "Osama Almobarak",
+    title: "Vice President, telecommunications",
+    photo: "/images/team/ba4 (1).jpg",
+    description:
+      "Telecom expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, he provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
+  }
 ];
 
 // helper to build `/firstName` route
