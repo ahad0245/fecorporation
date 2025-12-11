@@ -10,16 +10,16 @@ export interface TeamMember {
 
 // 🔽 your current teamMembers array moved here (unchanged)
 export const teamMembers: TeamMember[] = [
-  {
-    name: "Professor Hélyette Geman",
-    slug: "helyette",
-    title: "Founder & CFO",
-    photo: "/images/team/helyette-geman.jpg",
-    credentials:
-      "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
-    description:
-      "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
-  },
+  // {
+  //   name: "Professor Hélyette Geman",
+  //   slug: "helyette",
+  //   title: "Founder & CFO",
+  //   photo: "/images/team/helyette-geman.jpg",
+  //   credentials:
+  //     "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
+  //   description:
+  //     "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
+  // },
   {
     name: "Gareth Wiggan",
     title: "Director",
