@@ -10,16 +10,16 @@ export interface TeamMember {
 
 // 🔽 your current teamMembers array moved here (unchanged)
 export const teamMembers: TeamMember[] = [
-  // {
-  //   name: "Professor Hélyette Geman",
-  //   slug: "helyette",
-  //   title: "Founder & CFO",
-  //   photo: "/images/team/helyette-geman.jpg",
-  //   credentials:
-  //     "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
-  //   description:
-  //     "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
-  // },
+  {
+    name: "Professor Hélyette Geman",
+    slug: "helyette",
+    title: "Founder & CFO",
+    photo: "/images/team/helyette-geman.jpg",
+    credentials:
+      "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
+    description:
+      "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
+  },
   {
     name: "Gareth Wiggan",
     title: "Director",
@@ -93,6 +93,14 @@ export const teamMembers: TeamMember[] = [
     photo: "/images/team/ba4 (1).jpg",
     description:
       "Telecom expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, he provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
+  }
+  ,
+  {
+    name: "Laird Robertson",
+    title: "Outside General Counsel",
+    photo: "/images/team/Laird.png",
+    description:
+      "Yale-educated attorney with a J.D., cum laude, from Georgetown Law and studies at Oxford. Laird brings 30+ years advising investors and companies on corporate, finance, and real estate matters as outside counsel."
   }
 ];
 
