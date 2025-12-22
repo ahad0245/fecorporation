@@ -13,7 +13,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Professor Hélyette Geman",
     slug: "helyette",
-    title: "Founder & CFO",
+    title: "Founder & Chairman",
     photo: "/images/team/helyette-geman.jpg",
     credentials:
       "Financial Engineer of the Year 2022, Research Professor at Johns Hopkins University",
@@ -29,10 +29,10 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Kamran Tariq",
-    title: "Chairman",
+    title: "CFO",
     photo: "/images/team/Kami B&W.png",
     description:
-      "Chairman with a track record of building data-driven financial platforms across Europe and the Middle East. Kamran oversees firm strategy, governance, and technology alignment, ensuring every solution blends quantitative rigor with real-world usability."
+      "CFO with a track record of building data-driven financial platforms across Europe and the Middle East. Kamran oversees firm strategy, governance, and technology alignment, ensuring every solution blends quantitative rigor with real-world usability."
   },
   {
     name: "Mohammad Hamed",
