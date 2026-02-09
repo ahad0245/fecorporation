@@ -72,13 +72,13 @@ export const teamMembers: TeamMember[] = [
     description:
       "Senior advisor to boards and founders across telecom, technology, smart-city, and cybersecurity verticals."
   },
-  {
-    name: "Rami Omran",
-    title: "VP Middle East Operations",
-    photo: "/images/team/omran1.jpg",
-    description:
-      "Capital markets and investment banking professional with a strong record in growth strategy and cross-border deal-making. Rami leads on-the-ground execution, local partnerships, and client coverage across key Middle Eastern markets."
-  },
+  // {
+  //   name: "Rami Omran",
+  //   title: "VP Middle East Operations",
+  //   photo: "/images/team/omran1.jpg",
+  //   description:
+  //     "Capital markets and investment banking professional with a strong record in growth strategy and cross-border deal-making. Rami leads on-the-ground execution, local partnerships, and client coverage across key Middle Eastern markets."
+  // },
   {
     name: "Minnu Kalapala",
     title: "In-House Legal Counsel",
