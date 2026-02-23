@@ -34,20 +34,20 @@ export const teamMembers: TeamMember[] = [
     description:
       "CFO with a track record of building data-driven financial platforms across Europe and the Middle East. Kamran oversees firm strategy, governance, and technology alignment, ensuring every solution blends quantitative rigor with real-world usability."
   },
-  {
-    name: "Mohammad Hamed",
-    title: "CEO",
-    photo: "/images/team/ba1.jpg",
-    description:
-      "Seasoned capital markets executive with deep Middle East coverage. Mohammad leads regional strategy, investor relationships, and origination, connecting global capital with high-growth opportunities across infrastructure, financial services, and real assets."
-  },
-  {
-    name: "Hana Mikhled Al-Husainat",
-    title: "Chief Technology Officer",
-    photo: "/images/team/ba2.jpg",
-    description:
-      "Corporate finance and governance specialist turned technology leader. Hana designs and oversees the firm’s digital platforms, data architecture, and risk-aware workflows, enabling scalable, compliant solutions for banks, regulators, and regional enterprises."
-  },
+  // {
+  //   name: "Mohammad Hamed",
+  //   title: "CEO",
+  //   photo: "/images/team/ba1.jpg",
+  //   description:
+  //     "Seasoned capital markets executive with deep Middle East coverage. Mohammad leads regional strategy, investor relationships, and origination, connecting global capital with high-growth opportunities across infrastructure, financial services, and real assets."
+  // },
+  // {
+  //   name: "Hana Mikhled Al-Husainat",
+  //   title: "Chief Technology Officer",
+  //   photo: "/images/team/ba2.jpg",
+  //   description:
+  //     "Corporate finance and governance specialist turned technology leader. Hana designs and oversees the firm’s digital platforms, data architecture, and risk-aware workflows, enabling scalable, compliant solutions for banks, regulators, and regional enterprises."
+  // },
   {
     name: "Fei Xu",
     title: "Chartered Financial Analyst",
@@ -87,14 +87,14 @@ export const teamMembers: TeamMember[] = [
       "Legal expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, she provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
   }
   ,
-  {
-    name: "Osama Almobarak",
-    title: "Vice President, telecommunications",
-    photo: "/images/team/ba4 (1).jpg",
-    description:
-      "Telecom expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, he provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
-  }
-  ,
+  // {
+  //   name: "Osama Almobarak",
+  //   title: "Vice President, telecommunications",
+  //   photo: "/images/team/ba4 (1).jpg",
+  //   description:
+  //     "Telecom expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, he provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
+  // }
+  // ,
   {
     name: "Laird Robertson",
     title: "Outside General Counsel",
