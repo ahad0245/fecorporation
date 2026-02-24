@@ -21,13 +21,6 @@ export const teamMembers: TeamMember[] = [
       "World-renowned authority in financial engineering and commodity markets, combining deep academic research with practical structuring experience."
   },
   {
-    name: "Gareth Wiggan",
-    title: "Director",
-    photo: "/images/team/gareth-wiggan.jpg",
-    description:
-      "Specialist in infrastructure and cross-border project finance with more than 15 years of experience. Gareth has structured multi-billion-dollar capital solutions in energy, transport, and digital infrastructure for governments, sponsors, and institutional investors."
-  },
-  {
     name: "Kamran Tariq",
     title: "CFO",
     photo: "/images/team/Kami B&W.png",
@@ -55,14 +48,7 @@ export const teamMembers: TeamMember[] = [
     description:
       "Capital markets professional and CFA charterholder with extensive experience in China’s fixed-income and private-equity markets. Fei focuses on credit research, portfolio construction, and cross-border capital flows between Asia and the Middle East."
   },
-  {
-    name: "Dr. D.K. MacFadden",
-     slug: "macFadden", // 👈 NEW
-    title: "Medical Director & Innovation Specialist",
-    photo: "/images/team/dk-macfadden.png",
-    description:
-      "Medical sector innovator with deep expertise in healthcare systems and insurance. Dr. MacFadden applies clinical insight to create new insurance-linked securities and risk-transfer structures, particularly in life and health portfolios."
-  },
+
   {
     name: "Rodger Lodenguai",
     title: "Senior Executive Advisor",
@@ -101,6 +87,22 @@ export const teamMembers: TeamMember[] = [
     photo: "/images/team/Laird.png",
     description:
       "Yale-educated attorney with a J.D., cum laude, from Georgetown Law and studies at Oxford. Laird brings 30+ years advising investors and companies on corporate, finance, and real estate matters as outside counsel."
+  }
+  ,
+    {
+    name: "Dr. D.K. MacFadden",
+     slug: "macFadden", // 👈 NEW
+    title: "Medical Director & Innovation Specialist",
+    photo: "/images/team/dk-macfadden.png",
+    description:
+      "Medical sector innovator with deep expertise in healthcare systems and insurance. Dr. MacFadden applies clinical insight to create new insurance-linked securities and risk-transfer structures, particularly in life and health portfolios."
+  },
+  {
+    name: "Gareth Wiggan",
+    title: "Director",
+    photo: "/images/team/gareth-wiggan.jpg",
+    description:
+      "Specialist in infrastructure and cross-border project finance with more than 15 years of experience. Gareth has structured multi-billion-dollar capital solutions in energy, transport, and digital infrastructure for governments, sponsors, and institutional investors."
   }
 ];
 
