@@ -70,7 +70,7 @@ export const teamMembers: TeamMember[] = [
     title: "In-House Legal Counsel",
     photo: "/images/team/ba3.jpg",
     description:
-      "Legal expert overseeing corporate governance and regulatory compliance. As a registered attorney in Chicago holding a Juris Doctor degree, she provides specialized in-house counsel to ensure robust legal frameworks for financial operations."
+      "Legal expert overseeing corporate governance and regulatory compliance. As a Juris Doctor (JD) , she serves as In-House Counsel, providing specialized legal guidance to ensure robust frameworks for financial operations."
   }
   ,
   // {
