@@ -22,25 +22,25 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Kamran Tariq",
-    title: "CFO",
+    title: "Vice President & CTO",
     photo: "/images/team/Kami B&W.png",
     description:
       "CFO with a track record of building data-driven financial platforms across Europe and the Middle East. Kamran oversees firm strategy, governance, and technology alignment, ensuring every solution blends quantitative rigor with real-world usability."
   },
-  {
-    name: "Mohammad Hamed",
-    title: "CEO",
-    photo: "/images/team/ba1.jpg",
-    description:
-      "Seasoned capital markets executive with deep Middle East coverage. Mohammad leads regional strategy, investor relationships, and origination, connecting global capital with high-growth opportunities across infrastructure, financial services, and real assets."
-  },
-  {
-    name: "Hana Mikhled Al-Husainat",
-    title: "Chief Technology Officer",
-    photo: "/images/team/ba2.jpg",
-    description:
-      "Corporate finance and governance specialist turned technology leader. Hana designs and oversees the firm’s digital platforms, data architecture, and risk-aware workflows, enabling scalable, compliant solutions for banks, regulators, and regional enterprises."
-  },
+  // {
+  //   name: "Mohammad Hamed",
+  //   title: "CEO",
+  //   photo: "/images/team/ba1.jpg",
+  //   description:
+  //     "Seasoned capital markets executive with deep Middle East coverage. Mohammad leads regional strategy, investor relationships, and origination, connecting global capital with high-growth opportunities across infrastructure, financial services, and real assets."
+  // },
+  // {
+  //   name: "Hana Mikhled Al-Husainat",
+  //   title: "Chief Technology Officer",
+  //   photo: "/images/team/ba2.jpg",
+  //   description:
+  //     "Corporate finance and governance specialist turned technology leader. Hana designs and oversees the firm’s digital platforms, data architecture, and risk-aware workflows, enabling scalable, compliant solutions for banks, regulators, and regional enterprises."
+  // },
   {
     name: "Fei Xu",
     title: "Chartered Financial Analyst",
@@ -92,7 +92,7 @@ export const teamMembers: TeamMember[] = [
     {
     name: "Dr. D.K. MacFadden",
      slug: "macFadden", // 👈 NEW
-    title: "Medical Director & Innovation Specialist",
+    title: "CEO",
     photo: "/images/team/dk-macfadden.png",
     description:
       "Medical sector innovator with deep expertise in healthcare systems and insurance. Dr. MacFadden applies clinical insight to create new insurance-linked securities and risk-transfer structures, particularly in life and health portfolios."
