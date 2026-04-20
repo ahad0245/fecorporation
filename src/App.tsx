@@ -748,7 +748,7 @@ function App() {
                   </div>
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-white/80">+1–416-623-6345</div>
+                    <div className="text-white/80">+1 (416) 717-8953</div>
                   </div>
                 </div>
                 
