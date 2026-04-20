@@ -913,7 +913,7 @@ function App() {
             
             <div className="border-t border-white/20 pt-8">
               <p className="text-white/60 mb-4">
-                © 2025 Financial Engineering Corporation. All rights reserved.
+                © 2026 Financial Engineering Corporation. All rights reserved.
               </p>
               <p className="text-white/40 text-sm">
                 Transforming assets into global opportunities through sophisticated financial engineering.
