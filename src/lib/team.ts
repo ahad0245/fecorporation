@@ -104,6 +104,22 @@ export const teamMembers: TeamMember[] = [
     description:
       "Specialist in infrastructure and cross-border project finance with more than 15 years of experience. Gareth has structured multi-billion-dollar capital solutions in energy, transport, and digital infrastructure for governments, sponsors, and institutional investors."
   }
+  ,
+  {
+    name: "John 'Chris' Morgando",
+    title: "Director",
+    photo: "/images/team/chris.jpg",
+    description:
+      "A specialist in international project finance, Chris focuses on bridging the gap between institutional capital and large-scale infrastructure. With over 15 years of experience, he excels at navigating complex regulatory environments to deliver sustainable, long-term investment solutions for global stakeholders."
+  }
+  ,
+  {
+    name: "Shawn S.Sims",
+    title: "Director",
+    photo: "/images/team/Shawan.jpg",
+    description:
+      "Shawn is an expert in capital structuring and risk management within the energy and transport sectors. He brings 15+ years of industry tenure to the team, specializing in transforming ambitious cross-border visions into bankable realities through technical precision and resilient partnerships."
+  }
 ];
 
 // helper to build `/firstName` route
