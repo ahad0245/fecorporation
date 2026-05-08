@@ -16,7 +16,9 @@ import {
   Briefcase,
   Target,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Download,
+  FileText
 } from 'lucide-react'
 import { Link } from "react-router-dom";
 import "./App.css";
@@ -46,6 +48,7 @@ interface Project {
   status: string;
 }
 
+const engineeringGlobalLiquidityPdf = '/images/Engineering_Global_Liquidity.pdf';
 
 // const teamMembers: TeamMember[] = [
 //   {
@@ -466,6 +469,37 @@ function App() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-navy-200 bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 p-6 sm:p-8 shadow-xl">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold-500/15 text-gold-400">
+                  <FileText className="h-7 w-7" />
+                </div>
+                <div>
+                  <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-gold-400">
+                    Featured Download
+                  </p>
+                  <h3 className="text-2xl font-bold text-white">
+                    Engineering Global Liquidity
+                  </h3>
+                  <p className="mt-2 max-w-2xl text-base leading-relaxed text-white/75">
+                    Download the PDF overview for a deeper look at our global liquidity
+                    engineering framework and structuring approach.
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={engineeringGlobalLiquidityPdf}
+                download
+                className="inline-flex items-center justify-center gap-3 rounded-xl bg-gold-500 px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-gold-600"
+              >
+                <Download className="h-5 w-5" />
+                Download PDF
+              </a>
             </div>
           </div>
         </div>
