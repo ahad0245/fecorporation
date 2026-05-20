@@ -120,6 +120,14 @@ export const teamMembers: TeamMember[] = [
     description:
       "Shawn is an expert in capital structuring and risk management within the energy and transport sectors. He brings 15+ years of industry tenure to the team, specializing in transforming ambitious cross-border visions into bankable realities through technical precision and resilient partnerships."
   }
+  ,
+  {
+    name: "Dr. Aeshah Alamri",
+    title: "President, Middle East Operations",
+    photo: "/images/team/ba7.jpg",
+    description:
+      "An expert in industrial strategy and regional operations, Dr. Alamri focuses on bridging the gap between advanced technical innovation and large-scale infrastructure. With extensive experience in navigating the Middle East energy and development sectors."
+  }
 ];
 
 // helper to build `/firstName` route
