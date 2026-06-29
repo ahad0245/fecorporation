@@ -335,9 +335,9 @@ function App() {
               <button onClick={() => scrollToSection('methodology')} className="text-navy-700 hover:text-gold-600 transition-colors duration-200 font-medium">
                 Methodology
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-navy-700 hover:text-gold-600 transition-colors duration-200 font-medium">
-                Contact
-              </button>
+              <Link to="/garlic" className="text-navy-700 hover:text-gold-600 transition-colors duration-200 font-medium">
+                Garlic
+              </Link>
               <a
   href="https://z9i3vm4sng5r.space.minimax.io/"
   target="_blank"

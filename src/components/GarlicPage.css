@@ -1,0 +1,897 @@
+.garlic-page {
+  --garlic-ink: #0b1f19;
+  --garlic-forest: #10261d;
+  --garlic-forest-2: #183b2d;
+  --garlic-leaf: #557a45;
+  --garlic-gold: #c3a15f;
+  --garlic-gold-2: #e2c77d;
+  --garlic-cream: #f8f3e8;
+  --garlic-paper: #fffaf0;
+  --garlic-muted: #65716a;
+  --garlic-line: rgba(195, 161, 95, 0.32);
+  --garlic-shadow: 0 18px 50px rgba(11, 31, 25, 0.15);
+
+  min-height: 100vh;
+  color: var(--garlic-ink);
+  background: var(--garlic-cream);
+  line-height: 1.48;
+}
+
+.garlic-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.garlic-container,
+.garlic-hero-inner,
+.garlic-nav {
+  width: min(1160px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+.garlic-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(12, 31, 24, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.garlic-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 0;
+}
+
+.garlic-brand {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1px;
+  color: #ffffffa3;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.garlic-brand small {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.garlic-page a{
+  color:#ffffffa3;
+}
+
+.garlic-navlinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+}
+
+.garlic-navlinks a:hover {
+  color: var(--garlic-gold-2);
+}
+
+.garlic-nav-cta {
+  color: #13281f !important;
+  background: linear-gradient(135deg, var(--garlic-gold-2), var(--garlic-gold));
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-weight: 900;
+}
+
+.garlic-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 84% 4%, rgba(226, 199, 125, 0.22), transparent 31%),
+    radial-gradient(circle at 15% 86%, rgba(85, 122, 69, 0.34), transparent 34%),
+    linear-gradient(135deg, #081812, #173a2b 60%, #0e231b);
+}
+
+.garlic-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 85%);
+}
+
+.garlic-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+  gap: 34px;
+  align-items: center;
+  padding: 78px 0 64px;
+}
+
+.garlic-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.garlic-back-link svg,
+.garlic-btn svg,
+.garlic-strip-card svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.garlic-back-link:hover {
+  color: var(--garlic-gold-2);
+}
+
+.garlic-eyebrow,
+.garlic-kicker {
+  color: var(--garlic-gold);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.garlic-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--garlic-gold-2);
+  margin-bottom: 14px;
+}
+
+.garlic-eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--garlic-gold-2);
+}
+
+.garlic-page h1,
+.garlic-page h2 {
+  margin: 0;
+  color: inherit;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.045em;
+}
+
+.garlic-page h1 {
+  max-width: 780px;
+  margin-bottom: 18px;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 0.95;
+}
+
+.garlic-page h2 {
+  color: var(--garlic-forest);
+  font-size: clamp(31px, 4.2vw, 54px);
+  line-height: 1.02;
+}
+
+.garlic-page h3 {
+  margin: 0;
+  color: var(--garlic-forest);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+.garlic-hero-copy,
+.garlic-section-head p,
+.garlic-lead,
+.garlic-section > .garlic-container > .garlic-split p {
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 19px;
+}
+
+.garlic-hero-copy {
+  max-width: 710px;
+  margin: 0 0 22px;
+}
+
+.garlic-hero-points {
+  display: grid;
+  gap: 9px;
+  margin: 0 0 26px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.84);
+  list-style: none;
+}
+
+.garlic-hero-points li {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.garlic-hero-points li::before {
+  content: "";
+  width: 7px;
+  height: 12px;
+  margin-top: 3px;
+  border-right: 2px solid var(--garlic-gold-2);
+  border-bottom: 2px solid var(--garlic-gold-2);
+  transform: rotate(40deg);
+  flex: 0 0 auto;
+}
+
+.garlic-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.garlic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 900;
+  text-align: center;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.garlic-btn:hover {
+  transform: translateY(-1px);
+}
+
+.garlic-btn-primary {
+  color: #12251d;
+  background: linear-gradient(135deg, var(--garlic-gold-2), var(--garlic-gold));
+  box-shadow: 0 16px 38px rgba(195, 161, 95, 0.24);
+}
+
+.garlic-btn-secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.23);
+}
+
+.garlic-btn-dark {
+  color: #fff;
+  background: var(--garlic-forest);
+  border-color: var(--garlic-forest);
+}
+
+.garlic-deal-card,
+.garlic-highlight-box {
+  background: rgba(255, 250, 240, 0.97);
+  border: 1px solid rgba(226, 199, 125, 0.45);
+  box-shadow: var(--garlic-shadow);
+}
+
+.garlic-deal-card {
+  color: var(--garlic-ink);
+  border-radius: 28px;
+  padding: 26px;
+}
+
+.garlic-deal-label {
+  color: var(--garlic-forest-2);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.garlic-big-number {
+  margin: 12px 0 6px;
+  color: var(--garlic-forest);
+  font-size: clamp(48px, 8vw, 74px);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.garlic-muted {
+  color: var(--garlic-muted);
+}
+
+.garlic-no-margin,
+.garlic-funded-note {
+  margin: 0;
+}
+
+.garlic-funded-note {
+  color: var(--garlic-forest);
+  font-weight: 900;
+}
+
+.garlic-progress-wrap {
+  height: 13px;
+  margin: 18px 0 12px;
+  overflow: hidden;
+  background: #e6dcc8;
+  border: 1px solid rgba(16, 38, 29, 0.08);
+  border-radius: 999px;
+}
+
+.garlic-progress-fill {
+  width: 94%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--garlic-leaf), var(--garlic-gold));
+}
+
+.garlic-funding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.garlic-mini {
+  padding: 13px 12px;
+  background: #f2ead9;
+  border: 1px solid rgba(16, 38, 29, 0.08);
+  border-radius: 16px;
+}
+
+.garlic-mini strong {
+  display: block;
+  color: var(--garlic-forest);
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+
+.garlic-mini span {
+  display: block;
+  color: var(--garlic-muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.garlic-close-note {
+  margin-top: 16px;
+  padding: 13px;
+  color: var(--garlic-forest);
+  background: rgba(85, 122, 69, 0.11);
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.garlic-section {
+  padding: 76px 0;
+}
+
+.garlic-strip {
+  padding: 32px 0;
+  background: #efe2c8;
+  border-top: 1px solid var(--garlic-line);
+  border-bottom: 1px solid var(--garlic-line);
+}
+
+.garlic-strip-grid,
+.garlic-return-grid,
+.garlic-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.garlic-strip-card,
+.garlic-card,
+.garlic-return-card,
+.garlic-phase,
+.garlic-risk,
+.garlic-contact-card {
+  border: 1px solid var(--garlic-line);
+  border-radius: 20px;
+}
+
+.garlic-strip-card {
+  display: grid;
+  gap: 7px;
+  padding: 21px;
+  background: rgba(255, 250, 240, 0.82);
+  border-color: rgba(16, 38, 29, 0.09);
+}
+
+.garlic-strip-card svg {
+  color: var(--garlic-leaf);
+}
+
+.garlic-strip-card strong {
+  display: block;
+  color: var(--garlic-forest);
+  font-size: 25px;
+  letter-spacing: -0.04em;
+}
+
+.garlic-strip-card span {
+  color: var(--garlic-muted);
+  font-weight: 700;
+}
+
+.garlic-section-head {
+  max-width: 810px;
+  margin-bottom: 30px;
+}
+
+.garlic-section-head p,
+.garlic-lead,
+.garlic-highlight-box p,
+.garlic-final-cta p {
+  margin: 13px 0 0;
+  color: var(--garlic-muted);
+  font-size: 18px;
+}
+
+.garlic-kicker {
+  margin-bottom: 9px;
+}
+
+.garlic-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.garlic-card {
+  padding: 21px;
+  background: var(--garlic-paper);
+  box-shadow: 0 10px 34px rgba(16, 38, 29, 0.045);
+}
+
+.garlic-metric {
+  margin-bottom: 7px;
+  color: var(--garlic-forest);
+  font-size: 29px;
+  font-weight: 950;
+  letter-spacing: -0.045em;
+}
+
+.garlic-card h3,
+.garlic-return-card h3,
+.garlic-phase h3 {
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.garlic-card p,
+.garlic-return-card p,
+.garlic-phase p {
+  margin: 0;
+  color: var(--garlic-muted);
+  font-size: 14px;
+}
+
+.garlic-dark {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: var(--garlic-forest);
+}
+
+.garlic-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 12% 20%, rgba(226, 199, 125, 0.14), transparent 34%);
+}
+
+.garlic-dark .garlic-container {
+  position: relative;
+  z-index: 1;
+}
+
+.garlic-dark h2 {
+  color: #fff;
+}
+
+.garlic-dark .garlic-section-head p,
+.garlic-dark p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.garlic-return-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(226, 199, 125, 0.24);
+}
+
+.garlic-return-card span {
+  display: inline-flex;
+  margin-bottom: 15px;
+  padding: 7px 11px;
+  color: var(--garlic-gold-2);
+  background: rgba(226, 199, 125, 0.15);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.garlic-return-card h3,
+.garlic-dark .garlic-card h3,
+.garlic-dark .garlic-metric {
+  color: var(--garlic-gold-2);
+}
+
+.garlic-return-card p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.garlic-return-note {
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 14px;
+}
+
+.garlic-split {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.garlic-highlight-box {
+  padding: 28px;
+  background: linear-gradient(135deg, #fffaf0, #efe0bf);
+  border-radius: 26px;
+}
+
+.garlic-capital-stack,
+.garlic-use-list {
+  display: grid;
+  gap: 10px;
+}
+
+.garlic-stack-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 250, 240, 0.82);
+  border: 1px solid rgba(16, 38, 29, 0.08);
+  border-radius: 17px;
+}
+
+.garlic-stack-total {
+  background: rgba(85, 122, 69, 0.12);
+}
+
+.garlic-stack-row b,
+.garlic-use-item strong {
+  color: var(--garlic-forest);
+}
+
+.garlic-stack-row small {
+  display: block;
+  margin-top: 2px;
+  color: var(--garlic-muted);
+  font-weight: 700;
+}
+
+.garlic-amount {
+  color: var(--garlic-forest);
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.garlic-use-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(16, 38, 29, 0.1);
+}
+
+.garlic-use-item:last-child {
+  border-bottom: 0;
+}
+
+.garlic-use-item span {
+  display: block;
+  color: var(--garlic-muted);
+  font-size: 14px;
+}
+
+.garlic-phase {
+  padding: 23px;
+  background: var(--garlic-paper);
+}
+
+.garlic-phase > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 15px;
+  color: var(--garlic-gold-2);
+  background: var(--garlic-forest);
+  border-radius: 50%;
+  font-weight: 950;
+}
+
+.garlic-phase p strong {
+  display: block;
+  color: var(--garlic-forest);
+  margin-bottom: 4px;
+}
+
+.garlic-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+
+.garlic-risk {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(226, 199, 125, 0.24);
+}
+
+.garlic-risk strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--garlic-gold-2);
+}
+
+.garlic-risk span {
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 14px;
+}
+
+.garlic-final-cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--garlic-paper), #eadbb9);
+  border-top: 1px solid var(--garlic-line);
+  border-bottom: 1px solid var(--garlic-line);
+}
+
+.garlic-final-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  color: var(--garlic-leaf);
+}
+
+.garlic-final-cta h2 {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.garlic-final-cta p {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.garlic-centered {
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.garlic-contact-card {
+  max-width: 760px;
+  margin: 26px auto 0;
+  padding: 18px;
+  color: var(--garlic-muted);
+  background: rgba(255, 250, 240, 0.72);
+  border-color: rgba(16, 38, 29, 0.09);
+}
+
+.garlic-footer {
+  padding: 34px 0;
+  color: rgba(255, 255, 255, 0.66);
+  background: #081812;
+  font-size: 13px;
+}
+
+.garlic-footer strong {
+  color: var(--garlic-gold-2);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.garlic-disclaimer {
+  max-width: 1060px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.53);
+}
+
+.garlic-mobile-sticky {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 80;
+  display: none;
+  gap: 9px;
+  padding: 10px 12px env(safe-area-inset-bottom);
+  background: rgba(8, 24, 18, 0.94);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.garlic-mobile-sticky a {
+  flex: 1;
+  min-height: 46px;
+  padding: 12px 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 980px) {
+  .garlic-hero-inner,
+  .garlic-split {
+    grid-template-columns: 1fr;
+  }
+
+  .garlic-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .garlic-strip-grid,
+  .garlic-return-grid,
+  .garlic-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .garlic-navlinks a:not(.garlic-nav-cta) {
+    display: none;
+  }
+
+  .garlic-hero-inner {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .garlic-page {
+    padding-bottom: 82px;
+  }
+
+  .garlic-container,
+  .garlic-hero-inner,
+  .garlic-nav {
+    width: min(100% - 32px, 1160px);
+  }
+
+  .garlic-nav {
+    padding: 11px 0;
+  }
+
+  .garlic-brand {
+    font-size: 11px;
+    letter-spacing: 0.11em;
+  }
+
+  .garlic-brand small {
+    display: none;
+  }
+
+  .garlic-nav-cta {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+
+  .garlic-hero-inner {
+    gap: 24px;
+    padding: 44px 0 38px;
+  }
+
+  .garlic-eyebrow {
+    margin-bottom: 11px;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+  }
+
+  .garlic-eyebrow::before {
+    width: 22px;
+  }
+
+  .garlic-page h1 {
+    font-size: 42px;
+    line-height: 0.98;
+  }
+
+  .garlic-hero-copy {
+    margin-bottom: 17px;
+    font-size: 16px;
+  }
+
+  .garlic-hero-points {
+    font-size: 14px;
+  }
+
+  .garlic-cta-row .garlic-btn {
+    width: 100%;
+  }
+
+  .garlic-deal-card {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .garlic-funding-grid,
+  .garlic-cards,
+  .garlic-risk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .garlic-mini {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .garlic-mini strong {
+    font-size: 21px;
+  }
+
+  .garlic-section {
+    padding: 54px 0;
+  }
+
+  .garlic-section-head {
+    margin-bottom: 22px;
+  }
+
+  .garlic-section-head p,
+  .garlic-lead,
+  .garlic-highlight-box p,
+  .garlic-final-cta p {
+    font-size: 16px;
+  }
+
+  .garlic-card,
+  .garlic-return-card,
+  .garlic-phase,
+  .garlic-highlight-box {
+    padding: 19px;
+    border-radius: 20px;
+  }
+
+  .garlic-strip-card {
+    padding: 18px;
+  }
+
+  .garlic-stack-row,
+  .garlic-use-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .garlic-amount {
+    white-space: normal;
+  }
+
+  .garlic-mobile-sticky {
+    display: flex;
+  }
+}
