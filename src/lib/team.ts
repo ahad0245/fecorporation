@@ -100,7 +100,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Gareth Wiggan",
     title: "Director",
-    photo: "/images/team/gareth-wiggan.jpg",
+    photo: "/images/team/ba8.3.jpg",
     description:
       "Specialist in infrastructure and cross-border project finance with more than 15 years of experience. Gareth has structured multi-billion-dollar capital solutions in energy, transport, and digital infrastructure for governments, sponsors, and institutional investors."
   }
